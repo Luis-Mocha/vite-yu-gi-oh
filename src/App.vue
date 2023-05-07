@@ -24,6 +24,9 @@ export default {
       axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0')
       .then( (res) => {
         console.log(res.data.data) //array personaggi yu-gi-oh
+        
+        const infoApi = res.data.data;
+        store.arrayPersonaggi = infoApi;
       })
     },
   }
@@ -37,7 +40,7 @@ export default {
   <HeaderComp :titoloProps = " 'Yu-Gi-Oh!' " :classiProps="'text-center text-danger'" />
 
   <main class="container">
-
+    
     <PersonaggiComp/>
 
   </main>
