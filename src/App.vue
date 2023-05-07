@@ -1,6 +1,7 @@
 <script>
 //axios viene importato automaticamente
 import axios from 'axios';
+import {store} from './store'
 import HeaderComp from './components/HeaderComp.vue';
 import PersonaggiComp from './components/PersonaggiComp.vue';
 
@@ -9,6 +10,11 @@ export default {
   components: {
     HeaderComp,
     PersonaggiComp,
+  },
+  data() {
+    return {
+      store
+    }
   },
   created () {
     this.callApi()
