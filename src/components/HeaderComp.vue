@@ -2,6 +2,10 @@
 
     export default {
         name: 'HeaderComp',
+        props: [
+            'titoloProps',
+            'classiProps'
+        ]
     }
     
 </script>
@@ -9,7 +13,7 @@
 
 <template>
 
-    <h2>HeaderComp</h2>
+    <h1 :class="classiProps"> {{ titoloProps }} </h1>
 
 </template>
 
