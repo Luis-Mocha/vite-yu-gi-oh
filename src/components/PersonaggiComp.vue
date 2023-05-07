@@ -20,7 +20,7 @@
 
 <template>
 
-    <div class="text-success text-center">
+    <div class="container text-success text-center d-flex flex-wrap justify-content-between py-3">
         <SingoloPersonaggio 
         v-for="(elem, index) in store.arrayPersonaggi" :key="index"
         :infoPersonaggi="elem"
