@@ -12,13 +12,14 @@
 <template>
 
     <div class="card-personaggio text-center text-light rounded col-12 col-sm-6 col-md-4 col-lg-3">
-        <img :src="infoPersonaggi.card_images[0].image_url" alt="">
+        <img :src="infoPersonaggi.card_images[0].image_url" :alt="'Immagine ' + infoPersonaggi.name">
 
         <div class="card-info p-2">
-            <h2 class="p-0">
+            <h2 class="p-0 mt-2">
                 {{ infoPersonaggi.name }}
             </h2>        
 
+            <span>Description:</span>
             <p class="">
                 {{ infoPersonaggi.desc }}
             </p>
@@ -59,9 +60,13 @@
                 };
             }
 
+            span {
+                color: rgb(212,143,56);
+            }
+
             p {
                 padding: 0;
-                max-height: 120px;
+                height: 120px;
                 overflow: auto;
 
                 /* width */
