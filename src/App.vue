@@ -70,6 +70,13 @@ export default {
     },
 
     saveArchetype() {
+      axios.get( `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${store.inputArchetype}`)
+        .then( (res) => {
+          console.log(res.data.data) //array personaggi yu-gi-oh
+        
+          const infoArchetype = res.data.data;
+          store.arrayPersonaggi = infoArchetype;
+      })
       
     }
 
@@ -85,7 +92,7 @@ export default {
 
   <main>
 
-     <SearchComp @selezionaArchetipo="" /> <!--@nomeEmit="callApi()" -->
+     <SearchComp @selezionaArchetipo="saveArchetype()" /> <!--@nomeEmit="callApi()" -->
     
     <PersonaggiComp/>
 
