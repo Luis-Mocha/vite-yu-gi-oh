@@ -39,7 +39,11 @@
         margin-top: 10px;
         margin-bottom: 10px;
 
-        width: calc(100% / 2 - 5px);
+        width: calc(100%);
+
+        @media screen and (min-width: 425px) {
+            width: calc(100% / 2 - 10px);
+        };
 
         @media screen and (min-width: 576px) {
             width: calc(100% / 3 - 5px);
@@ -73,6 +77,10 @@
                 padding: 0;
                 height: 120px;
                 overflow: auto;
+                border-width: 0px 0px 1px 1px;
+                border-style: solid;
+                border-color: rgb(212,143,56);
+
 
                 /* width */
                 &::-webkit-scrollbar {
