@@ -18,9 +18,10 @@ export default {
       store
     }
   },
-  // created () {
-  //   this.callApi()
-  // },
+  created() {
+    this.callApiInizio()
+  },
+  
   computed: {
     //funzione Call Api
       callApi() {
@@ -33,8 +34,8 @@ export default {
           store.arrayPersonaggi = infoApi;
         })
         } else {
-          axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=24&offset=0')
-          .then( (res) => {
+          axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=12&offset=0')
+            .then( (res) => {
             console.log(res.data.data) //array personaggi yu-gi-oh
           
             const infoApi = res.data.data;
@@ -44,29 +45,18 @@ export default {
       }
     // Fine Call Api
   },
-  // methods: {
-  //   //funzione Call Api
-  //      callApi() {
-  //        if (store.testoRicerca !== '') {
-  //          axios.get( `https:db.ygoprodeck.com/api/v7/cardinfo.php?num=${store.testoRicerca}&offset=0`)
-  //          .then( (res) => {
-  //          console.log(res.data.data) //array personaggi yu-gi-oh
+  methods: {
+    callApiInizio() {
+      axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=12&offset=0')
+        .then( (res) => {
+          console.log(res.data.data) //array personaggi yu-gi-oh
         
-  //          const infoApi = res.data.data;
-  //          store.arrayPersonaggi = infoApi;
-  //        })
-  //        } else {
-  //          axios.get( 'https:db.ygoprodeck.com/api/v7/cardinfo.php?num=24&offset=0')
-  //          .then( (res) => {
-  //            console.log(res.data.data) //array personaggi yu-gi-oh
-          
-  //            const infoApi = res.data.data;
-  //            store.arrayPersonaggi = infoApi;
-  //          })
-  //        }
-  //      }
-  //   //Fine Call Api
-  // }
+          const infoApi = res.data.data;
+          store.arrayPersonaggi = infoApi;
+      })
+    }
+  }
+  
 }
 
 </script>

@@ -18,7 +18,7 @@
 <template>
 
     <div>
-        <input type="text" placeholder="Search Card" v-model="store.testoRicerca" @keyup.enter.prevent="$emit('nomeEmit')"> <!-- @keyup.prevent="$emit('nomeEmit') -->
+        <input type="text" placeholder="Search Card" v-model="store.testoRicerca" @keyup.enter="$emit('nomeEmit')" @keyup.delete="$emit('nomeEmit')"> <!-- @keyup.prevent="$emit('nomeEmit') -->
         <button type="submit" @click.prevent="$emit('nomeEmit')">
             Ricerca per nome
         </button>
