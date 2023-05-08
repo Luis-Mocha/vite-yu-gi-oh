@@ -19,40 +19,53 @@ export default {
     }
   },
   created() {
-    this.callApiInizio()
+    // this.callApiInizio()
+    this.callArchetipi()
   },
   
   computed: {
+    
     //funzione Call Api
-      callApi() {
-        if (store.testoRicerca !== '') {
-          axios.get( `https://db.ygoprodeck.com/api/v7/cardinfo.php?name=${store.testoRicerca}`)
-          .then( (res) => {
-          console.log(res.data.data) //array personaggi yu-gi-oh
+      // callApi() {
+      //   if (store.testoRicerca !== '') {
+      //     axios.get( `https://db.ygoprodeck.com/api/v7/cardinfo.php?name=${store.testoRicerca}`)
+      //     .then( (res) => {
+      //     console.log(res.data.data) //array personaggi yu-gi-oh
         
-          const infoApi = res.data.data;
-          store.arrayPersonaggi = infoApi;
-        })
-        } else {
-          axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=12&offset=0')
-            .then( (res) => {
-            console.log(res.data.data) //array personaggi yu-gi-oh
+      //     const infoApi = res.data.data;
+      //     store.arrayPersonaggi = infoApi;
+      //   })
+      //   } else {
+      //     axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=12&offset=0')
+      //       .then( (res) => {
+      //       console.log(res.data.data) //array personaggi yu-gi-oh
           
-            const infoApi = res.data.data;
-            store.arrayPersonaggi = infoApi;
-          })
-        }
-      }
+      //       const infoApi = res.data.data;
+      //       store.arrayPersonaggi = infoApi;
+      //     })
+      //   }
+      // }
     // Fine Call Api
   },
   methods: {
-    callApiInizio() {
-      axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=12&offset=0')
-        .then( (res) => {
-          console.log(res.data.data) //array personaggi yu-gi-oh
+    // callApiInizio() {
+    //   axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=12&offset=0')
+    //     .then( (res) => {
+    //       console.log(res.data.data) //array personaggi yu-gi-oh
         
-          const infoApi = res.data.data;
-          store.arrayPersonaggi = infoApi;
+    //       const infoApi = res.data.data;
+    //       store.arrayPersonaggi = infoApi;
+    //   })
+    // }
+
+    //Funzione iniziale per richiamare gli archetipi
+    callArchetipi() {
+      axios.get( 'https://db.ygoprodeck.com/api/v7/archetypes.php')
+        .then( (res) => {
+          console.log(res.data) //array personaggi yu-gi-oh
+        
+          const infoApi = res.data;
+          store.arrayArchetipi = infoApi;
       })
     }
   }
@@ -67,7 +80,7 @@ export default {
 
   <main>
 
-    <SearchComp @nomeEmit="callApi()"/>
+     <SearchComp /> <!--@nomeEmit="callApi()" -->
     
     <PersonaggiComp/>
 
