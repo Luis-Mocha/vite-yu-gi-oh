@@ -20,9 +20,11 @@
             </h2>        
 
             <span>Description:</span>
-            <p class="">
+            <p>
                 {{ infoPersonaggi.desc }}
             </p>
+
+            <span>Archetipo: {{ infoPersonaggi.archetype }}</span>
         </div>
     </div>
 

@@ -20,7 +20,8 @@ export default {
   },
   created() {
     // this.callApiInizio()
-    this.callArchetype()
+    this.callArchetype(),
+    this.saveArchetype()
   },
   
   computed: {
@@ -92,7 +93,7 @@ export default {
 
   <main>
 
-     <SearchComp @selezionaArchetipo="saveArchetype()" /> <!--@nomeEmit="callApi()" -->
+    <SearchComp @selezionaArchetipo="saveArchetype()" /> <!--@nomeEmit="callApi()" -->
     
     <PersonaggiComp/>
 
