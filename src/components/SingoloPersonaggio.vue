@@ -31,6 +31,9 @@
 <style lang="scss" scoped>
     .card-personaggio {
         background-color: rgb(33,37,41);
+        border-width: 4px;
+        border-color: white;
+        border-style:double;
         margin-top: 10px;
         margin-bottom: 10px;
 

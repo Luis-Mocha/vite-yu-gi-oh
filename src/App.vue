@@ -21,7 +21,7 @@ export default {
   },
   methods: {
     callApi() {
-      axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=12&offset=0')
+      axios.get( 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=24&offset=0')
       .then( (res) => {
         console.log(res.data.data) //array personaggi yu-gi-oh
         
