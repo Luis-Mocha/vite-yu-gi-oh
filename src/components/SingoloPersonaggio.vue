@@ -18,7 +18,7 @@
 
 <template>
 
-    <div class="card-personaggio text-center text-light rounded col-12 col-sm-6 col-md-4 col-lg-3" :class=" (infoPersonaggi.name.toLowerCase().includes(store.testoRicerca.toLowerCase()) ) ? 'd-block' : 'd-none' ">
+    <div class="card-personaggio text-center text-light rounded col-12 col-sm-6 col-md-4 col-lg-3" :class=" (infoPersonaggi.name.toLowerCase().includes(store.testoRicerca.toLowerCase()) ) ? '' : 'd-none'">
         <img :src="infoPersonaggi.card_images[0].image_url" :alt="'Immagine ' + infoPersonaggi.name">
 
         <div class="card-info p-2">

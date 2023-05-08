@@ -25,7 +25,7 @@
         v-for="(elem, index) in store.arrayPersonaggi" :key="index"
         :infoPersonaggi="elem"
         />
-    </div>
+    </div>    
 
 </template>
 
