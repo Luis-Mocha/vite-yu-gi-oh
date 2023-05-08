@@ -57,7 +57,7 @@ export default {
 
 <template>
 
-  <HeaderComp :titoloProps = " 'Yu-Gi-Oh!' " :classiProps="'text-center text-danger'" />
+  <HeaderComp :titoloProps = " 'Yu-Gi-Oh!' " :classiProps="'text-center'" />
 
   <main>
 

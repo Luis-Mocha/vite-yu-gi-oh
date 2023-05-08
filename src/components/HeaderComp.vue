@@ -25,6 +25,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        background-color: rgb(33,37,41);
+        
+        h1 {
+            color: rgb(212,143,56);
+            font-family:'Times New Roman', Times, serif;
+            font-weight: 800;
+            font-size: 50px;
+        }
     }
 
 </style>
