@@ -2,7 +2,8 @@ import {reactive} from "vue";
 
 export const store = reactive (
     {
-        arrayArchetipi: [],
+        arrayArchetype: [],
+        inputArchetype: '',
         arrayPersonaggi: [],
         testoRicerca: '',
     }

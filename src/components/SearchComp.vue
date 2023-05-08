@@ -18,9 +18,14 @@
 <template>
 
     <div>
-        <select name="selectArchetype" id="selectArchetype">
-            <option v-for="(elem, index) in store.arrayArchetipi" value="{{ elem.archetype_name }}"> {{ elem.archetype_name }}</option>
+        <select name="selectArchetype" id="selectArchetype" v-model="store.inputArchetype">
+            <option v-for="(elem, index) in store.arrayArchetype" :key="index" :value="elem.archetype_name">
+                {{ elem.archetype_name }}
+            </option>
         </select>
+        <button type="submit" @click.prevent="$emit('selezionaArchetipo')">
+            Cerca Archetipo
+        </button>
     </div>
 
     <!--

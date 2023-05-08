@@ -20,7 +20,7 @@ export default {
   },
   created() {
     // this.callApiInizio()
-    this.callArchetipi()
+    this.callArchetype()
   },
   
   computed: {
@@ -59,15 +59,20 @@ export default {
     // }
 
     //Funzione iniziale per richiamare gli archetipi
-    callArchetipi() {
+    callArchetype() {
       axios.get( 'https://db.ygoprodeck.com/api/v7/archetypes.php')
         .then( (res) => {
           console.log(res.data) //array personaggi yu-gi-oh
         
           const infoApi = res.data;
-          store.arrayArchetipi = infoApi;
+          store.arrayArchetype = infoApi;
       })
+    },
+
+    saveArchetype() {
+      
     }
+
   }
   
 }
@@ -80,7 +85,7 @@ export default {
 
   <main>
 
-     <SearchComp /> <!--@nomeEmit="callApi()" -->
+     <SearchComp @selezionaArchetipo="" /> <!--@nomeEmit="callApi()" -->
     
     <PersonaggiComp/>
 
