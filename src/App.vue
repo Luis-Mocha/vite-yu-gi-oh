@@ -105,5 +105,6 @@ export default {
 
   main {
     background-color: rgb(212,143,56);
+    min-height: calc(100vh - 70px);
   }
 </style>

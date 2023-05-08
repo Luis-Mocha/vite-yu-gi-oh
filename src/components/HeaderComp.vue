@@ -20,6 +20,12 @@
 </template>
 
 <style lang="scss" scoped>
+    header {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 
 </style>
 
