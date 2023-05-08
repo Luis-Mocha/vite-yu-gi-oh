@@ -13,7 +13,9 @@
 
 <template>
 
-    <h1 :class="classiProps"> {{ titoloProps }} </h1>
+    <header>
+        <h1 :class="classiProps" class="p-0 m-0"> {{ titoloProps }} </h1>
+    </header>
 
 </template>
 
