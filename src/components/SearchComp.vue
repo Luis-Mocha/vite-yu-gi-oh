@@ -28,15 +28,13 @@
         </button>
     </div>
 
-    <!--
+    
     <div>
-        <input type="search" name="" id="" placeholder="Search Card by name" v-model="store.testoRicerca" @keyup.enter="$emit('nomeEmit')" @keyup.delete="$emit('nomeEmit')"> 
-        <button type="submit" @click.prevent="$emit('nomeEmit')">
-            Ricerca per nome
-        </button>
+        <input type="search" name="inputName" id="inputName" placeholder="Filter by name" v-model="store.testoRicerca" @keyup.enter="$emit('filtraNomeEmit')" @keyup.delete="$emit('filtraNomeEmit')"> 
+        <!-- <button type="submit" @click.prevent="$emit('nomeEmit')">
+            Filtra per nome
+        </button> -->
     </div>
-    -->
-    <!-- @keyup.prevent="$emit('nomeEmit') -->
 
 </template>
 
